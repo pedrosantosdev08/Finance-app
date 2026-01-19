@@ -2,6 +2,7 @@ import "./HomeStyle.css";
 import Dashboard from "../../assets/dashboard.png";
 import HistoryTransaction from "../../assets/historyTransaction.png";
 import Objetive from "../../assets/objetive.png";
+import HeroBanner from "../../assets/hero-banner.png";
 
 export function Home() {
   return (
@@ -9,7 +10,6 @@ export function Home() {
       <header>
         <div className="tittle">
           <h1>FinanceApp</h1>
-          <p>O seu gestor financeiro</p>
         </div>
         <div className="auth-actions">
           <button>Login</button>
@@ -19,12 +19,10 @@ export function Home() {
 
       <main>
         <section className="sobre-nos">
-          <h2>Controle financeiro simplificado</h2>
-          <p>
-            O FinanceApp transforma seus gastos e receitas em uma visão clara do
-            seu dinheiro, ajudando você a tomar decisões financeiras com mais
-            segurança e controle.
-          </p>
+          <div className="hero">
+            <img src={HeroBanner} alt="Banner principal" />
+          </div>
+
         </section>
 
         <section className="funcionalidades">

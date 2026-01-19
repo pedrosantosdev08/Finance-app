@@ -1,208 +1,213 @@
 /* Reset básico */
 * {
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    margin: 0;
+  margin: 0;
 }
 
 main {
-    text-align: center;
+  text-align: center;
 }
 
 /* Sobre nós */
 .sobre-nos {
-    background-color: var(--background-color, #f5f5f5);
-    color: var(--text-color-light, #333);
-    padding: 4rem 2rem;
+  background-color: var(--background-color, #f5f5f5);
+  color: var(--text-color-light, #333);
+  padding: 4rem 2rem;
+}
+
+.sobre-nos .hero img {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+
+  border-radius: 12px;
+  width: 90%; /* Ocupa 100% da largura do container */
+  height: 80vh; /* Mantém a proporção */
 }
 
 /* Funcionalidades */
 .funcionalidades {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 4rem 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
 }
 
 .funcionalidades p {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .call-to-action {
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--text-color-black);
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--text-color-black);
 }
 
 /* Card Function */
 .card-function {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: stretch; /* faz imagem e texto terem mesma altura */
-    margin-bottom: 4rem;
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.18);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: stretch; /* faz imagem e texto terem mesma altura */
+  margin-bottom: 4rem;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 1px 4px 8px rgba(0, 0, 0, 0.18);
 }
 
 /* Texto do card */
 .card-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* centraliza verticalmente */
-    text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centraliza verticalmente */
+  text-align: left;
 }
 
 .card-text h3 {
-    margin-bottom: 0.5rem;
-    font-size: 1.5rem;
-    color: #111;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #111;
 }
 
 .card-text p {
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.6;
-
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
 }
 
 /* Imagens */
 .card-function img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 /* Zig-zag invertido: começar com imagem à direita */
 .card-function:nth-child(odd) {
-    grid-template-areas: "text img";
+  grid-template-areas: "text img";
 }
 
 .card-function:nth-child(odd) .card-text {
-    grid-area: text;
+  grid-area: text;
 }
 
 .card-function:nth-child(odd) img {
-    grid-area: img;
+  grid-area: img;
 }
 
 .card-function:nth-child(even) {
-    grid-template-areas: "img text";
+  grid-template-areas: "img text";
 }
 
 .card-function:nth-child(even) .card-text {
-    grid-area: text;
+  grid-area: text;
 }
 
 .card-function:nth-child(even) img {
-    grid-area: img;
+  grid-area: img;
 }
 
 /* Mobile */
 @media (max-width: 768px) {
-    .card-function {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "img"
-            "text";
-        text-align: center;
-    }
+  .card-function {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "img"
+      "text";
+    text-align: center;
+  }
 
-    .card-function img,
-    .card-function .card-text {
-        grid-area: auto;
-    }
+  .card-function img,
+  .card-function .card-text {
+    grid-area: auto;
+  }
 
-    .card-text {
-        justify-content: flex-start;
-    }
+  .card-text {
+    justify-content: flex-start;
+  }
 }
 
 /* Footer */
 footer {
-    background-color: var(--primary-color, #111);
-    color: var(--text-color, #fff);
-    text-align: center;
-    padding: 20px 0;
+  background-color: var(--primary-color, #111);
+  color: var(--text-color, #fff);
+  text-align: center;
+  padding: 20px 0;
 }
 
 footer ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 25px;
-    margin-top: 10px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 10px;
 }
 
 footer p {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 footer a {
-    text-decoration: none;
-    color: var(--text-color-light);
-    
+  text-decoration: none;
+  color: var(--text-color-light);
 }
 
 footer a:hover {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 ul {
-    list-style-type: none;
-    padding: 0;
-    
-    
+  list-style-type: none;
+  padding: 0;
 }
 
 /* Header */
 header {
-    background-color: var(--primary-color, #111);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
+  background-color: var(--primary-color, #111);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  padding: 30px;
 }
 
 .tittle {
-    color: white;
+  color: white;
 }
 
 .tittle p {
-    margin-top: -5px;
-    font-size: 14px;
+  margin-top: -5px;
+  font-size: 14px;
 }
 
 .auth-actions button {
-    margin-left: 10px;
-    padding: 8px 16px;
-    font-size: 14px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  margin-left: 10px;
+  padding: 8px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 .auth-actions button:first-child {
-    background-color: var(--primary-color, #111);
-    color: #fff;
+  background-color: var(--primary-color, #111);
+  color: #fff;
 }
 
 .auth-actions button:last-child {
-    background-color: var(--secondary-color, #f1c40f);
-    color: #111;
+  background-color: var(--secondary-color, #f1c40f);
+  color: #111;
 }
 
 .auth-actions button:hover {
-    opacity: 0.9;
-    font-weight: bold;
+  opacity: 0.9;
+  font-weight: bold;
 }
