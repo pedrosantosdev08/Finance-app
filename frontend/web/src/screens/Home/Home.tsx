@@ -1,9 +1,9 @@
 import "./HomeStyle.css";
-import Dashboard from "../../assets/dashboard.png";
-import HistoryTransaction from "../../assets/historyTransaction.png";
-import Objetive from "../../assets/objetive.png";
-import HeroBanner from "../../assets/hero-banner.png";
-import Logo from "../../assets/logo-monervy.png";
+import HeroBanner from "../../assets/hero-banner.png"
+import Logo from "../../assets/logo-monervy.png"
+import Dashboard from "../../assets/dashboard.png"
+import HistoryTransaction from "../../assets/historyTransaction.png"
+import Objetive from "../../assets/objetive.png"
 
 export function Home() {
   return (

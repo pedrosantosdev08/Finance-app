@@ -1,5 +1,6 @@
-import "./styles/global.css";
+
 import { Home } from "./screens/Home/Home";
+import "./styles/global.css";
 
 function App() {
   return (
