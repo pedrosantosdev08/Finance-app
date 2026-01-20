@@ -3,13 +3,14 @@ import Dashboard from "../../assets/dashboard.png";
 import HistoryTransaction from "../../assets/historyTransaction.png";
 import Objetive from "../../assets/objetive.png";
 import HeroBanner from "../../assets/hero-banner.png";
+import Logo from "../../assets/logo-monervy.png";
 
 export function Home() {
   return (
     <>
       <header>
-        <div className="tittle">
-          <h1>FinanceApp</h1>
+        <div className="logo">
+          <img src={Logo} alt="Logo Monervy" />
         </div>
         <div className="auth-actions">
           <button>Login</button>
@@ -22,7 +23,6 @@ export function Home() {
           <div className="hero">
             <img src={HeroBanner} alt="Banner principal" />
           </div>
-
         </section>
 
         <section className="funcionalidades">
