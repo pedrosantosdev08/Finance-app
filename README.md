@@ -1,73 +1,57 @@
-# React + TypeScript + Vite
+# 💰 Monervy
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Monervy** é um aplicativo de gestão financeira pessoal desenvolvido para centralizar, organizar e simplificar o controle das suas finanças. O objetivo do projeto é oferecer uma experiência moderna, segura e intuitiva para que usuários consigam acompanhar gastos, receitas e tomar decisões financeiras mais inteligentes.
 
-Currently, two official plugins are available:
+O Monervy está sendo construído com foco em **aprendizado prático**, **arquitetura escalável** e **boas práticas de mercado**, servindo tanto como um produto real quanto como um projeto de portfólio profissional.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Visão Geral
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Com o Monervy, o usuário pode:
 
-## Expanding the ESLint configuration
+* Criar uma conta e autenticar-se de forma segura
+* Registrar receitas e despesas
+* Categorizar movimentações financeiras
+* Visualizar o resumo financeiro em dashboards
+* Acompanhar saldo, entradas e saídas
+* Evoluir futuramente para relatórios, metas e insights financeiros
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🎯 Objetivos do Projeto
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+* Centralizar o controle financeiro do usuário em um único lugar
+* Oferecer uma interface simples, moderna e responsiva
+* Garantir segurança no cadastro e autenticação
+* Aplicar conceitos reais de backend e frontend modernos
+* Servir como projeto principal de portfólio full stack
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🧠 Público-Alvo
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+* Pessoas que desejam organizar melhor suas finanças pessoais
+* Usuários que buscam simplicidade sem perder controle
+* Desenvolvedores que desejam estudar um projeto full stack real
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+### Frontend
+
+* **React**
+* **TypeScript**
+* **React Router DOM**
+* Arquitetura baseada em **components**, **screens** e **assets**
+
+### Backend
+
+* **Node.js**
+* **NestJS**
+* **TypeScript**
+* **JWT** para autenticação
+* **Bcrypt** para criptografia de senhas
+* **REST API**
+
