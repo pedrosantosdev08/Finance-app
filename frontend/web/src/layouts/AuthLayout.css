@@ -1,0 +1,12 @@
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    var(--background-color, #121212),
+    var(--primary-color, #1f1f1f) 60%,
+    #1a1a1a 100%
+  );
+}

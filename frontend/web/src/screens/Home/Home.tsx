@@ -1,24 +1,32 @@
-import "./HomeStyle.css";
-import HeroBanner from "../../assets/hero-banner.png"
-import Logo from "../../assets/logo-monervy.png"
-import Dashboard from "../../assets/dashboard.png"
-import HistoryTransaction from "../../assets/historyTransaction.png"
-import Objetive from "../../assets/objetive.png"
+import "./Home.css";
+import HeroBanner from "../../assets/hero-banner.png";
+import Logo from "../../assets/logo-monervy.png";
+import Dashboard from "../../assets/dashboard.png";
+import HistoryTransaction from "../../assets/historyTransaction.png";
+import Objetive from "../../assets/objetive.png";
+import { useNavigate } from "react-router-dom";
 
 export function Home() {
+  const navigate = useNavigate();
+
   return (
     <>
-      <header>
+      <header className="cabecalho">
         <div className="logo">
           <img src={Logo} alt="Logo Monervy" />
         </div>
         <div className="auth-actions">
-          <button>Login</button>
-          <button>Cadastre-se</button>
+          <button type="button" onClick={() => navigate("/login")}>
+            Login
+          </button>
+
+          <button type="button" onClick={() => navigate("/register")}>
+            Cadastre-se
+          </button>
         </div>
       </header>
 
-      <main>
+      <main className="conteudo">
         <section className="sobre-nos">
           <div className="hero">
             <img src={HeroBanner} alt="Banner principal" />
@@ -74,8 +82,8 @@ export function Home() {
         </section>
       </main>
 
-      <footer>
-        <p>FinanceApp &copy; 2026</p>
+      <footer className="rodape">
+        <p>FinanceApp &copy; {new Date().getFullYear()}</p>
         <section className="contato">
           <p>Contato</p>
           <ul className="nav-footer">
