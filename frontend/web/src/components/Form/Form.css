@@ -47,6 +47,10 @@
   cursor: pointer;
 }
 
+.form-container .button:hover {
+  background-color: var(--primary-color-dark, #333);
+}
+
 .auth-link {
   margin-top: 15px;
   text-align: center;
