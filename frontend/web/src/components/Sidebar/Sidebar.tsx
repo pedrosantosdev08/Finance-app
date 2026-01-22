@@ -1,33 +1,25 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "./Sidebar.css";
 
-type SidebarType =
-  | "dashboard"
-  | "transactions"
-  | "objetives"
-  | "profile"
-  | "settings";
+const titles: Record<string, string> = {
+  "/dashboard": "Dashboard",
+  "/transactions": "Transações",
+  "/objetives": "Objetivos",
+  "/profile": "Perfil",
+  "/settings": "Configurações",
+};
 
-export default function Sidebar({ type }: { type?: SidebarType }) {
+export default function Sidebar() {
+  const { pathname } = useLocation();
+
+  const title = titles[pathname] ?? "";
+
   return (
     <aside className="sidebar">
       <header className="sidebar-header">
-        <h1>
-          {type === "dashboard"
-            ? "Dashboard"
-            : type === "transactions"
-            ? "Transações"
-            : type === "objetives"
-            ? "Objetivos"
-            : type === "profile"
-            ? "Perfil"
-            : type === "settings"
-            ? "Configurações"
-            : ""}
-        </h1>
+        <h1>{title}</h1>
       </header>
 
-      {/* MENU PRINCIPAL */}
       <nav className="sidebar-menu">
         <NavLink to="/dashboard" className="sidebar-item">
           Dashboard
@@ -42,7 +34,6 @@ export default function Sidebar({ type }: { type?: SidebarType }) {
         </NavLink>
       </nav>
 
-      {/* FOOTER */}
       <nav className="sidebar-footer">
         <NavLink to="/profile" className="sidebar-item-footer">
           Perfil
