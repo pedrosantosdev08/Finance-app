@@ -1,0 +1,73 @@
+/* container principal */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #111;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* header */
+.sidebar-header {
+  padding: 1.5rem 1rem;
+}
+
+.sidebar-header h1 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* menu principal */
+.sidebar-menu {
+  flex: 1; /* empurra o footer para baixo */
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 0.25rem;
+}
+
+/* footer */
+.sidebar-footer {
+  padding: 1rem;
+  border-top: 1px solid #222;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/* item padrão (menu e footer) */
+.sidebar-item,
+.sidebar-item-footer {
+  display: flex;
+  align-items: center;
+
+  width: 100%;
+  padding: 0.75rem 1rem;
+
+  font-size: 18px;
+  color: #ccc;
+  text-decoration: none;
+
+  border-radius: 6px;
+  cursor: pointer;
+
+  transition: background 0.2s, color 0.2s;
+}
+
+/* hover */
+.sidebar-item:hover,
+.sidebar-item-footer:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+/* item ativo (NavLink) */
+.sidebar-item.active,
+.sidebar-item-footer.active {
+  background-color: #333;
+  color: #fff;
+  font-weight: 600;
+}

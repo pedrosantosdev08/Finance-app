@@ -1,7 +1,7 @@
 import "../Auth.css";
 import { Form } from "../../../components/Form/Form";
 import { useNavigate } from "react-router-dom";
-import { AuthLayout } from "../../../layouts/AuthLayout";
+import AuthLayout from "../../../layouts/Auth/AuthLayout";
 
 export default function RegisterScreen() {
   const navigate = useNavigate();
