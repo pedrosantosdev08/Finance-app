@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Form.css";
 
 export function Form({ type }: { type?: "login" | "register" }) {
+
+  const navigate = useNavigate();
   return (
     <>
       <div className="form-wrapper">
@@ -41,7 +43,7 @@ export function Form({ type }: { type?: "login" | "register" }) {
             </>
           )}
 
-          <button type="submit" className="button">
+          <button type="submit" className="button" onClick={()=> navigate("/dashboard")}>
             {type === "login" ? "Entrar" : "Cadastrar"}
           </button>
           <p className="auth-link">
