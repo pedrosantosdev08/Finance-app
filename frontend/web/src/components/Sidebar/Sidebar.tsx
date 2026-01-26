@@ -12,7 +12,8 @@ const titles: Record<string, string> = {
 export default function Sidebar() {
   const { pathname } = useLocation();
 
-  const title = titles[pathname] ?? "";
+  const title = titles[pathname.replace("/", "")] ?? "";
+
 
   return (
     <aside className="sidebar">

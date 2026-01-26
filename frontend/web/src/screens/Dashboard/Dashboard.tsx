@@ -1,13 +1,11 @@
-import { Outlet } from "react-router-dom";
-import Sidebar from "../../components/Sidebar/Sidebar";
-import { AppLayout } from "../../layouts/App/AppLayout";
+import "./Dashboard.css";
 
 export default function Dashboard() {
   return (
-    <div>
-      <AppLayout>
-        <Outlet />
-      </AppLayout>
-    </div>
+    <section className="page">
+      <h2>Dashboard</h2>
+
+      <p>Resumo geral do usuário</p>
+    </section>
   );
 }

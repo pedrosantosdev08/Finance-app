@@ -1,14 +1,10 @@
-import { Outlet } from "react-router-dom";
-import Sidebar from "../../components/Sidebar/Sidebar";
-import { AppLayout } from "../../layouts/App/AppLayout";
+import "./Settings.css";
 
-export default function Profile() {
+export default function Settings() {
     return (
-        <div>
-            <AppLayout>
-
-                <Outlet/>
-            </AppLayout>
-        </div>
+        <section className="page">
+            <h2>Configurações</h2>
+            <p>Gerenciamento de configurações do usuário</p>
+        </section>
     );
 }

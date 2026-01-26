@@ -1,12 +1,11 @@
-import { Outlet } from "react-router-dom";
-import { AppLayout } from "../../layouts/App/AppLayout";
+import "./Transactions.css";
 
 export default function Transactions() {
   return (
-    <div>
-      <AppLayout>
-        <Outlet />
-      </AppLayout>
-    </div>
+    <section className="page">
+      <h2>Transações</h2>
+
+      <p>Gerenciamento de transações financeiras do usuário</p>
+    </section>
   );
 }

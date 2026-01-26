@@ -1,14 +1,11 @@
-import { Outlet } from "react-router-dom";
-import Sidebar from "../../components/Sidebar/Sidebar";
-import { AppLayout } from "../../layouts/App/AppLayout";
+import "./Objetives.css";
 
 export default function Objetives() {
     return (
-        <div>
-            <AppLayout>
-                
-                <Outlet/>
-            </AppLayout>
-        </div>
+        <section className="page">
+            <h2>Objetivos</h2>
+
+            <p>Gerenciamento de objetivos financeiros do usuário</p>
+        </section>
     );
 }
