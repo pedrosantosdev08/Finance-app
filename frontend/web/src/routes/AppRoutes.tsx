@@ -12,14 +12,17 @@ export default function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* Rotas publicas */}
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<LoginScreen />} />
         <Route path="/register" element={<RegisterScreen />} />
-        <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/transactions" element={<Transactions />} />
-        <Route path="/objetives" element={<Objetives />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/settings" element={<Settings />} />
+        {/* Rotas privadas */}
+        <Route path="/user" element={<Dashboard />} />
+        <Route path="/user/dashboard" element={<Dashboard />} />
+        <Route path="/user/transactions" element={<Transactions />} />
+        <Route path="/user/objetives" element={<Objetives />} />
+        <Route path="/user/profile" element={<Profile />} />
+        <Route path="/user/settings" element={<Settings />} />
       </Routes>
     </BrowserRouter>
   );

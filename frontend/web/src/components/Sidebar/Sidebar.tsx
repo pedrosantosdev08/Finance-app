@@ -2,11 +2,11 @@ import { NavLink, useLocation } from "react-router-dom";
 import "./Sidebar.css";
 
 const titles: Record<string, string> = {
-  "/dashboard": "Dashboard",
-  "/transactions": "Transações",
-  "/objetives": "Objetivos",
-  "/profile": "Perfil",
-  "/settings": "Configurações",
+  "user/dashboard": "Dashboard",
+  "user/transactions": "Transações",
+  "user/objetives": "Objetivos",
+  "user/profile": "Perfil",
+  "user/settings": "Configurações",
 };
 
 export default function Sidebar() {
@@ -21,25 +21,25 @@ export default function Sidebar() {
       </header>
 
       <nav className="sidebar-menu">
-        <NavLink to="/dashboard" className="sidebar-item">
+        <NavLink to="/user/dashboard" className="sidebar-item">
           Dashboard
         </NavLink>
 
-        <NavLink to="/transactions" className="sidebar-item">
+        <NavLink to="/user/transactions" className="sidebar-item">
           Transações
         </NavLink>
 
-        <NavLink to="/objetives" className="sidebar-item">
+        <NavLink to="/user/objetives" className="sidebar-item">
           Objetivos
         </NavLink>
       </nav>
 
       <nav className="sidebar-footer">
-        <NavLink to="/profile" className="sidebar-item-footer">
+        <NavLink to="/user/profile" className="sidebar-item-footer">
           Perfil
         </NavLink>
 
-        <NavLink to="/settings" className="sidebar-item-footer">
+        <NavLink to="/user/settings" className="sidebar-item-footer">
           Configurações
         </NavLink>
       </nav>

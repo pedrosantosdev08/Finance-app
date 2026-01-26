@@ -43,7 +43,7 @@ export function Form({ type }: { type?: "login" | "register" }) {
             </>
           )}
 
-          <button type="submit" className="button" onClick={()=> navigate("/dashboard")}>
+          <button type="submit" className="button" onClick={()=> navigate("/user")}>
             {type === "login" ? "Entrar" : "Cadastrar"}
           </button>
           <p className="auth-link">
